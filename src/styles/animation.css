@@ -1,0 +1,9 @@
+@keyframes opacity {
+    0%   {background-color:#27389700;}
+    40%  {background-color:#2738977c; }
+  }
+
+  @keyframes down {
+    0%   {background-color:rgba(255, 255, 255, 0); left:0px; top:0px;}
+    40%  {background-color:rgba(255, 255, 255, 0); left:0px; top:80px;}
+  }

@@ -83,10 +83,13 @@ export default {
 .content-delete {
   position: absolute;
   top: 12%;
-  left: 2%;
   height: 220px;
-  background: white;
+  background: rgba(255, 255, 255, 0.327);
+  animation-name: down;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
 }
+
 .modal-delete {
   position: relative;
   width: 80%;

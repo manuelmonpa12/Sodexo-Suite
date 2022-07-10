@@ -1,44 +1,54 @@
 <template>
-  <div class="content background-gray border">
-    <div class="full-width">
-      <div class="d-flex p4 background-white box-padding justify-space-between">
-        <div class="display-column align-start">
-          <span class="text-simple">Todos los</span>
-          <span class="text-bold">Beneficiarios</span>
-        </div>
-        <button class="btn primary" @click="select(null)">
-          <div class="btn-icon">
-            <img src="../assets/plus.svg" height="15" alt="img delete"  class="filter-white" />
+  <div class="content background-gray border" >
+      <div class="full-width">
+        <div
+          class="d-flex p4 background-white box-padding justify-space-between"
+        >
+          <div class="display-column align-start">
+            <span class="text-simple">Todos los</span>
+            <span class="text-bold">Beneficiarios</span>
           </div>
-          <span>Nuevo</span>
-        </button>
-      </div>
-      <div class="p4 input-search">
-        <img
-          v-show="!search"
-          src="../assets/search.svg"
-          height="60"
-          alt="img delete"
-        />
-        <input class="input-primary text-center" placeholder="Buscar" v-model="search" />
-      </div>
-      <div
-        class="p4 pt-0"
-        v-for="person in search ? filteredList : beneficiary"
-        :key="person.id"
-      >
-        <cardList :dataInfo="person" />
-      </div>
-      <div v-if="search && !filteredList.length" class="p4">
-        <div class="card-empty display-column justify-center align-center">
+          <button class="btn primary" @click="select(null)">
+            <div class="btn-icon">
+              <img
+                src="../assets/plus.svg"
+                height="15"
+                alt="img delete"
+                class="filter-white"
+              />
+            </div>
+            <span>Nuevo</span>
+          </button>
+        </div>
+        <div class="p4 input-search">
           <img
-            src="../assets/nofound.gif"
+            v-show="!search"
+            src="../assets/search.svg"
+            height="60"
             alt="img delete"
           />
-          <span class="text-simple text-center">No se encontraron resultados</span>
+          <input
+            class="input-primary text-center"
+            placeholder="Buscar"
+            v-model="search"
+          />
+        </div>
+        <div
+          class="p4 pt-0"
+          v-for="person in search ? filteredList : beneficiary"
+          :key="person.id"
+        >
+          <cardList :dataInfo="person" />
+        </div>
+        <div v-if="search && !filteredList.length" class="p4">
+          <div class="card-empty display-column justify-center align-center">
+            <img src="../assets/nofound.gif" alt="img delete" />
+            <span class="text-simple text-center"
+              >No se encontraron resultados</span
+            >
+          </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -85,4 +95,10 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.beneficiaries-width {
+  width: 30%;
+  max-width: 430px;
+  position: relative;
+}
+</style>

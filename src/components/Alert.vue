@@ -1,5 +1,5 @@
 <template>
-  <div v-if="active" class="full-width d-flex justify-center dont-select">
+  <div v-if="active" class="full-width d-flex justify-center dont-select mobile">
     <div class="alert-primary">
       <span>{{ message }}</span>
       <div class="btn-icon-end">
@@ -58,5 +58,9 @@ export default {
   justify-content: center;
   align-items: center;
   display: flex;
+  animation-name: opacity;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
+
 </style>

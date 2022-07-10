@@ -9,7 +9,7 @@
       </div>
       <div class="d-flex content-btn">
         <button class="btn primary" @click="addUser()">
-          <span>{{itemSelect ? "Actulizar" : 'Guardar'}}</span>
+          <span>{{itemSelect ? "Actualizar" : 'Guardar'}}</span>
         </button>
         <button class="btn btn-error" @click="deleteUser()">
           <div class="btn-icon">
@@ -74,13 +74,14 @@ export default {
       if (this.name && this.document && this.cash) {
         const temp = this.beneficiary.filter((p) => p.id == this.itemSelect);
         if (temp && this.itemSelect) {
+          this.updateItem()
           this.alert.active = true;
           this.alert.msg = "El Beneficiario a sido actualizado ";
           setTimeout(() => {
             this.alert.active = false;
           }, 1000);
         } else {
-        //Se crea el usuario utilizando la mutations 'PUSH_USER'
+        //SE CREA EL USUARIO UTILIZANDO LA MUTACION 'PUSH_USER'
           this.$store.commit("PUSH_USER", {
             name: this.name,
             document: this.document,
@@ -99,8 +100,18 @@ export default {
         }, 1000);
       }
     },
+    updateItem() {
+      // BUSCO EL INDICE PARA SABER QUE ELEMENTO ACTUALIZAR
+      const indexOfObject = this.beneficiary.findIndex((object) => {
+        return object.id === this.itemSelect;
+      });
+      // SE ACTULIZA EL ELEMENTO DEL ARRAY DE OBJETOS
+      this.beneficiary[indexOfObject].name = this.name
+      this.beneficiary[indexOfObject].document = this.document
+      this.beneficiary[indexOfObject].cash = this.cash
+    },
     deleteUser() {
-    //Se habilita el modal de confirmacion para eliminar
+    //SE HABILITA EL MODAL DE CONFIRMACION PARA ELIMINAR
       if (this.itemSelect) {
         this.deleteData.active = true;
         setTimeout(() => {
@@ -121,9 +132,16 @@ export default {
     },
   },
   computed: {
+    //SE OBTIENEN LOS DATOS DEL VUEX
     beneficiary: {
       get() {
         return this.$store.state.beneficiary || [];
+      },
+      set(value) {
+        this.$store.commit("SET_EDITING_OBJECT", {
+          key: "beneficiary",
+          value,
+        });
       },
     },
     idIncrement:{
@@ -184,5 +202,10 @@ export default {
 .content-forms {
   border-left: solid #e5e5e5 1px;
   width: 80%;
+}
+.detail-width {
+  min-width: 70%;
+  width:inherit;
+  position: relative;
 }
 </style>

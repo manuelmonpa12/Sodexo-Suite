@@ -3,7 +3,7 @@
     <navbar />
     <div class="content">
       <menuLeft />
-      <div class="d-flex full-width">
+      <div class="d-flex full-width content-page">
         <beneficiaries class="beneficiaries-width" />
         <detail />
       </div>
@@ -34,93 +34,6 @@ export default {
 @import "./../styles/buttom.css";
 @import "./../styles/inputs.css";
 @import "./../styles/padding.css";
-
-.beneficiaries-width {
-  width: 30%;
-  max-width: 300px;
-}
-
-.detail-width {
-  min-width: 70%;
-  width:inherit;
-  position: relative;
-}
-
-/* .name-enterprise {
-  padding: 0 15px
-} */
-@media only screen and (max-width: 630px) {
-  .search {
-    display: none;
-  }
-  .grid-gray {
-    display: none !important;
-  }
-  .content-btn {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-  .box-padding {
-    padding-bottom: 27px;
-  }
-  .content-img {
-    width: 30%;
-  }
-  .content {
-    height: 95%;
-  }
-  .btn-icon-end {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 430px) {
-  .align-start {
-    text-align: start;
-  }
-  .text-bold {
-    font-size: 12px;
-    line-height: 13px;
-  }
-  .btn-icon {
-    display: none !important;
-  }
-
-  .primary {
-    min-width: 80px !important;
-  }
-  .content-img {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .content-forms {
-    width: 90%;
-  }
-
-  .container-detail {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
-.navbar {
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-  border-bottom: 1px solid #e5e5e5;
-  height: 9vh;
-}
-
-.sub-navbar {
-  justify-content: start;
-  align-items: center;
-  display: flex;
-  height: 100%;
-}
+@import "./../styles/animation.css";
+@import "./../styles/responsive.css";
 </style>
