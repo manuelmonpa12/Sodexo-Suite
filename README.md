@@ -1,6 +1,9 @@
 # Sodexo Suite | Amaris
 ![alt text](https://github.com/manuelmonpa12/Sodexo-Suite/blob/main/src/assets/image.png)
 
+### Frontend project by Manuel Montero for Amaris
+See [demo](https://sodexo-suite.vercel.app/#/)
+
 ## Project setup
 ```
 npm install
