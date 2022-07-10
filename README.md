@@ -1,4 +1,5 @@
 # amaris
+![alt text](https://github.com/Sodexo-Suite/blob/main/src/assets/image.png)
 
 ## Project setup
 ```
