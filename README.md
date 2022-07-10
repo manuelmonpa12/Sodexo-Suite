@@ -1,4 +1,4 @@
-# amaris
+# Sodexo Suite | Amaris
 ![alt text](https://github.com/manuelmonpa12/Sodexo-Suite/blob/main/src/assets/image.png)
 
 ## Project setup
