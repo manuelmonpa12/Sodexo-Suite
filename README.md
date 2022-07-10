@@ -1,5 +1,5 @@
 # amaris
-![alt text](https://github.com/Sodexo-Suite/blob/main/src/assets/image.png)
+![alt text](https://github.com/manuelmonpa12/Sodexo-Suite/blob/main/src/assets/image.png)
 
 ## Project setup
 ```
