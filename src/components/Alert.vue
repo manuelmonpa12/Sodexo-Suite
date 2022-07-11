@@ -24,7 +24,7 @@ export default {
     visible() {
       if (this.visible) {
         this.active = this.visible;
-        this.timerCount = 10;
+        this.timerCount = 90;
       }
     },
     timerCount: {
@@ -48,6 +48,7 @@ export default {
 </script>
 <style scoped>
 .alert-primary {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   position: relative;
   width: 80%;
   background: #273897;

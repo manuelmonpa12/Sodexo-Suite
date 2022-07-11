@@ -31,7 +31,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   display: flex;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid rgba(244, 245, 245, 1);
   height: 9vh;
 }
 

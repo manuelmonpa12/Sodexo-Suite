@@ -63,11 +63,11 @@
     display: flex;
     justify-content:center;
     align-items:center;
-    border-right: 1px solid #e5e5e5;
+    border-right: 1px solid rgba(244, 245, 245, 1);
 }
 
 .border{
-    border-right: 1px solid #e5e5e5;
+    border-right: 1px solid rgba(244, 245, 245, 1);
 }
 
 .full-width{
@@ -75,7 +75,7 @@
 }
 
 .border-bottom{
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid rgba(244, 245, 245, 1);
 }
 
 .dont-select{

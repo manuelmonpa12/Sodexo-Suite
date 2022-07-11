@@ -38,6 +38,17 @@
           <input class="input-forms" type="text" v-model="cash" />
         </div>
       </div>
+       <div class="d-flex content-btn-mobile">
+        <button class="btn primary" @click="addUser()">
+          <span>{{itemSelect ? "Actualizar" : 'Guardar'}}</span>
+        </button>
+        <button class="btn btn-error" @click="deleteUser()">
+          <div class="btn-icon">
+            <img src="../assets/minus.svg" height="15" alt="img delete"  class="filter-white" />
+          </div>
+          <span>Eliminar</span>
+        </button>
+      </div>
     </div>
     <deleteModal :visible="deleteData.active" :user="dataDetail" />
     <alert :visible="alert.active" :message="alert.msg" />
@@ -200,7 +211,7 @@ export default {
 }
 
 .content-forms {
-  border-left: solid #e5e5e5 1px;
+  border-left: solid  1px rgba(244, 245, 245, 1);
   width: 80%;
 }
 .detail-width {
